@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>Welcom to DevOps LTIMindtree</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>Welcome to DevOps LTIMindtree</h1>
+    <p>Bhar do form to create an account.</p>
     <hr>
      
     <label for="Name"><b>Ashish Kumar Mahobia</b></label>
