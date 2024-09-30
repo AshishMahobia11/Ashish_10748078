@@ -68,7 +68,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ashish12
-        IMAGE_TAG: ${{ latest }}
+        IMAGE_TAG: latest
       run: |
         kubectl apply -f deployment.yml 
         kubectl apply -f service.yml
