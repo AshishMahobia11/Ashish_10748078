@@ -56,5 +56,4 @@ jobs:
     - name: Push Docker image to ECR
       run: |
         docker push 717279715145.dkr.ecr.ap-southeast-1.amazonaws.com/ashish12:latest
-        kubectl apply -f deployment.yml --validate=false
-        kubectl apply -f service.yml
+        
