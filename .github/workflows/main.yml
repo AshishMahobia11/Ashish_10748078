@@ -56,7 +56,8 @@ jobs:
     - name: Push Docker image to ECR
       run: |
         docker push 717279715145.dkr.ecr.ap-southeast-1.amazonaws.com/ashish12:latest
-        - name: Set up kubectl
+    
+    - name: Set up kubectl
       uses: azure/setup-kubectl@v1
       with:
         version: v1.31.0
