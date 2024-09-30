@@ -56,4 +56,20 @@ jobs:
     - name: Push Docker image to ECR
       run: |
         docker push 717279715145.dkr.ecr.ap-southeast-1.amazonaws.com/ashish12:latest
+        - name: Set up kubectl
+      uses: azure/setup-kubectl@v1
+      with:
+        version: v1.31.0
+    - name: Update kubeconfig
+      run: |
+        aws eks update-kubeconfig --name ashish-cluster --region ap-southeast-1
+ 
+    - name: Deploy to EKS
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: ashish12
+        IMAGE_TAG: ${{ latest }}
+      run: |
+        kubectl apply -f deployment.yml 
+        kubectl apply -f service.yml
         
