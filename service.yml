@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: regapp-service1
   labels:
-    app: my-app1
+    app: reg-app
 spec:
   selector:
-    app: my-app1
+    app: reg-app
 
   ports:
     - port: 8080
