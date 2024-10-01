@@ -11,7 +11,7 @@ env:
  
   EKS_CLUSTER_NAME: ashish-cluster
  
-  AWS_REGION: ap-southeast-1
+  AWS_REGION: ap-south-1
 jobs:
  
   build:
