@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 env:
  
-  ECR_REPOSITORY: ashish12
+  ECR_REPOSITORY: ashish13
 
  
   EKS_CLUSTER_NAME: ashish-cluster
