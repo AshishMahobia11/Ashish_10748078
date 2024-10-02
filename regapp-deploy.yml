@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: regapp-deployment
+  name: my-deployment
   labels: 
      app: regapp
  
@@ -18,10 +18,12 @@ spec:
     spec:
       containers:
       - name: regapp
-        image: 717279715145.dkr.ecr.ap-southeast-1.amazonaws.com/chirag-ecr:latest
+        image: <your_ecr_image>
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+      - name: ecr-registry-secret
   strategy:
     type: RollingUpdate
     rollingUpdate:
